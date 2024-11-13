@@ -1,14 +1,12 @@
-import { Suspense } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 
-export default function Routes() {
-    return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
-            <Suspense fallback={}>
-                <Routes>
+import MainRoutes from './MainRoutes';
 
-                </Routes>
-            </Suspense>
-        </BrowserRouter>
-    )
-};
+console.log('routes index');
+
+// const router = createBrowserRouter([MainRoutes, LoginRoutes], {
+const router = createBrowserRouter([MainRoutes], {
+  basename: process.env.PUBLIC_URL,
+});
+
+export default router;

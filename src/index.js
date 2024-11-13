@@ -1,6 +1,5 @@
-import React from 'react';
+import App from 'App';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 
 // scroll bar
 import 'simplebar-react/dist/simplebar.min.css';
