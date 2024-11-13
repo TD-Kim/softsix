@@ -3,11 +3,10 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 // material-ui
+import MuiBreadcrumbs from '@mui/material/Breadcrumbs';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import MuiBreadcrumbs from '@mui/material/Breadcrumbs';
 
-// project import
 import MainCard from 'components/MainCard';
 
 export default function Breadcrumbs({ navigation, title, ...others }) {
@@ -54,7 +53,13 @@ export default function Breadcrumbs({ navigation, title, ...others }) {
   // collapse item
   if (main && main.type === 'collapse') {
     mainContent = (
-      <Typography component={Link} to={document.location.pathname} variant="h6" sx={{ textDecoration: 'none' }} color="textSecondary">
+      <Typography
+        component={Link}
+        to={document.location.pathname}
+        variant='h6'
+        sx={{ textDecoration: 'none' }}
+        color='textSecondary'
+      >
         {main.title}
       </Typography>
     );
@@ -64,7 +69,7 @@ export default function Breadcrumbs({ navigation, title, ...others }) {
   if (item && item.type === 'item') {
     itemTitle = item.title;
     itemContent = (
-      <Typography variant="subtitle1" color="textPrimary">
+      <Typography variant='subtitle1' color='textPrimary'>
         {itemTitle}
       </Typography>
     );
@@ -72,11 +77,28 @@ export default function Breadcrumbs({ navigation, title, ...others }) {
     // main
     if (item.breadcrumbs !== false) {
       breadcrumbContent = (
-        <MainCard border={false} sx={{ mb: 3, bgcolor: 'transparent' }} {...others} content={false}>
-          <Grid container direction="column" justifyContent="flex-start" alignItems="flex-start" spacing={1}>
+        <MainCard
+          border={false}
+          sx={{ mb: 3, bgcolor: 'transparent' }}
+          {...others}
+          content={false}
+        >
+          <Grid
+            container
+            direction='column'
+            justifyContent='flex-start'
+            alignItems='flex-start'
+            spacing={1}
+          >
             <Grid item>
-              <MuiBreadcrumbs aria-label="breadcrumb">
-                <Typography component={Link} to="/" color="textSecondary" variant="h6" sx={{ textDecoration: 'none' }}>
+              <MuiBreadcrumbs aria-label='breadcrumb'>
+                <Typography
+                  component={Link}
+                  to='/'
+                  color='textSecondary'
+                  variant='h6'
+                  sx={{ textDecoration: 'none' }}
+                >
                   Home
                 </Typography>
                 {mainContent}
@@ -85,7 +107,7 @@ export default function Breadcrumbs({ navigation, title, ...others }) {
             </Grid>
             {title && (
               <Grid item sx={{ mt: 2 }}>
-                <Typography variant="h5">{item.title}</Typography>
+                <Typography variant='h5'>{item.title}</Typography>
               </Grid>
             )}
           </Grid>
@@ -111,5 +133,5 @@ Breadcrumbs.propTypes = {
   title: PropTypes.bool,
   titleBottom: PropTypes.bool,
   sx: PropTypes.any,
-  others: PropTypes.any
+  others: PropTypes.any,
 };

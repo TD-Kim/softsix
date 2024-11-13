@@ -1,10 +1,9 @@
-import {
-  createTheme,
-  CssBaseline,
-  StyledEngineProvider,
-  ThemeProvider,
-} from '@mui/material';
+import PropTypes from 'prop-types';
 import { useMemo } from 'react';
+
+// material-ui
+import { CssBaseline, StyledEngineProvider } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import componentsOverride from './overrides';
 import Palette from './palette';
@@ -12,6 +11,7 @@ import CustomShadows from './shadows';
 import Typography from './typography';
 
 export default function ThemeCustomization({ childen }) {
+  console.log('ThemeCustomization');
   const theme = Palette('light', 'default');
 
   const themeTypography = Typography(`'Public Sans', sans-serif`);
@@ -55,3 +55,7 @@ export default function ThemeCustomization({ childen }) {
     </StyledEngineProvider>
   );
 }
+
+ThemeCustomization.propTypes = {
+  children: PropTypes.node,
+};

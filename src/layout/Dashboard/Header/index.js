@@ -1,13 +1,12 @@
 import { useMemo } from 'react';
 
 // material-ui
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
+import { useTheme } from '@mui/material/styles';
+import Toolbar from '@mui/material/Toolbar';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
-// project import
 import AppBarStyled from './AppBarStyled';
 import HeaderContent from './HeaderContent';
 
@@ -37,12 +36,16 @@ export default function Header() {
     <Toolbar>
       <IconButton
         disableRipple
-        aria-label="open drawer"
+        aria-label='open drawer'
         onClick={() => handlerDrawerOpen(!drawerOpen)}
-        edge="start"
-        color="secondary"
-        variant="light"
-        sx={{ color: 'text.primary', bgcolor: drawerOpen ? iconBackColorOpen : iconBackColor, ml: { xs: 0, lg: -2 } }}
+        edge='start'
+        color='secondary'
+        variant='light'
+        sx={{
+          color: 'text.primary',
+          bgcolor: drawerOpen ? iconBackColorOpen : iconBackColor,
+          ml: { xs: 0, lg: -2 },
+        }}
       >
         {!drawerOpen ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
       </IconButton>
@@ -56,9 +59,9 @@ export default function Header() {
     color: 'inherit',
     elevation: 0,
     sx: {
-      borderBottom: `1px solid ${theme.palette.divider}`
+      borderBottom: `1px solid ${theme.palette.divider}`,
       // boxShadow: theme.customShadows.z1
-    }
+    },
   };
 
   return (

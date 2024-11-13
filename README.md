@@ -9,6 +9,8 @@ npm install antd
 npm install framer-motion
 npm install swr
 npm install react-device-detect
+npm install react-apexcharts apexcharts
+npm install formik yup
 
 # 프로젝트 실행
 

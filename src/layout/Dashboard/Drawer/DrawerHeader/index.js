@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 // material-ui
 import { useTheme } from '@mui/material/styles';
 
-// project import
-import DrawerHeaderStyled from './DrawerHeaderStyled';
 import Logo from 'components/logo';
+import DrawerHeaderStyled from './DrawerHeaderStyled';
 
 // ==============================|| DRAWER HEADER ||============================== //
 

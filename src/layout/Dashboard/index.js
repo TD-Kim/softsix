@@ -6,7 +6,6 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-// project import
 import Breadcrumbs from 'components/@extended/Breadcrumbs';
 import Loader from 'components/Loader';
 import navigation from 'menu-items';
@@ -14,11 +13,12 @@ import Drawer from './Drawer';
 import Header from './Header';
 
 import { handlerDrawerOpen, useGetMenuMaster } from 'api/menu';
-
+debugger;
 // ==============================|| MAIN LAYOUT ||============================== //
 
 export default function DashboardLayout() {
   console.log('DashboardLayout');
+  debugger;
   const { menuMasterLoading } = useGetMenuMaster();
   const downXL = useMediaQuery((theme) => theme.breakpoints.down('xl'));
 

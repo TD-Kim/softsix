@@ -12,10 +12,9 @@ import ListItemText from '@mui/material/ListItemText';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-// project import
 import MainCard from 'components/MainCard';
 import AnalyticEcommerce from 'components/cards/statistics/AnalyticEcommerce';
-// import MonthlyBarChart from './MonthlyBarChart';
+import MonthlyBarChart from './MonthlyBarChart';
 // import OrdersTable from './OrdersTable';
 // import ReportAreaChart from './ReportAreaChart';
 // import SaleReportCard from './SaleReportCard';
@@ -25,7 +24,6 @@ import AnalyticEcommerce from 'components/cards/statistics/AnalyticEcommerce';
 import GiftOutlined from '@ant-design/icons/GiftOutlined';
 import MessageOutlined from '@ant-design/icons/MessageOutlined';
 import SettingOutlined from '@ant-design/icons/SettingOutlined';
-import { Grid2 } from '@mui/material';
 import avatar1 from 'assets/images/users/avatar-1.png';
 import avatar2 from 'assets/images/users/avatar-2.png';
 import avatar3 from 'assets/images/users/avatar-3.png';
@@ -53,8 +51,8 @@ const actionSX = {
 export default function DashboardDefault() {
   console.log('DashboardDefault');
   return (
-    <Grid2 container rowSpacing={4.5} columnSpacing={2.75}>
-      <div>dd</div>
+    <Grid container rowSpacing={4.5} columnSpacing={2.75}>
+      <div style={{ color: 'red' }}>dd</div>
       {/* row 1 */}
       <Grid item xs={12} sx={{ mb: -2.25 }}>
         <Typography variant='h5'>Dashboard</Typography>
@@ -122,7 +120,7 @@ export default function DashboardDefault() {
               <Typography variant='h3'>$7,650</Typography>
             </Stack>
           </Box>
-          {/* <MonthlyBarChart /> */}
+          <MonthlyBarChart />
         </MainCard>
       </Grid>
 
@@ -300,6 +298,6 @@ export default function DashboardDefault() {
           </Stack>
         </MainCard>
       </Grid>
-    </Grid2>
+    </Grid>
   );
 }

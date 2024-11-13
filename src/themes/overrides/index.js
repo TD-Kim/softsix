@@ -1,7 +1,6 @@
 // third-party
 import { merge } from 'lodash';
 
-// project import
 import Badge from './Badge';
 import Button from './Button';
 import CardContent from './CardContent';
