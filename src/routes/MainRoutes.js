@@ -20,37 +20,37 @@ const SamplePage = Loadable(
 const MainRoutes = {
   path: '/',
   element: <Dashboard />,
-  // children: [
-  //   {
-  //     path: '/',
-  //     element: <DashboardDefault />,
-  //   },
-  //   {
-  //     path: 'color',
-  //     element: <Color />,
-  //   },
-  //   {
-  //     path: 'dashboard',
-  //     children: [
-  //       {
-  //         path: 'default',
-  //         element: <DashboardDefault />,
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     path: 'sample-page',
-  //     element: <SamplePage />,
-  //   },
-  //   {
-  //     path: 'shadow',
-  //     element: <Shadow />,
-  //   },
-  //   {
-  //     path: 'typography',
-  //     element: <Typography />,
-  //   },
-  // ],
+  children: [
+    {
+      path: '/',
+      element: <DashboardDefault />,
+    },
+    //   {
+    //     path: 'color',
+    //     element: <Color />,
+    //   },
+    //   {
+    //     path: 'dashboard',
+    //     children: [
+    //       {
+    //         path: 'default',
+    //         element: <DashboardDefault />,
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     path: 'sample-page',
+    //     element: <SamplePage />,
+    //   },
+    //   {
+    //     path: 'shadow',
+    //     element: <Shadow />,
+    //   },
+    //   {
+    //     path: 'typography',
+    //     element: <Typography />,
+    //   },
+  ],
 };
 
 export default MainRoutes;
