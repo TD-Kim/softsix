@@ -1,16 +1,11 @@
 import { useRef, useState } from 'react';
 
-// material-ui
-import Avatar from '@mui/material/Avatar';
 import Badge from '@mui/material/Badge';
 import Box from '@mui/material/Box';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
-import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
 import ListItemText from '@mui/material/ListItemText';
 import Paper from '@mui/material/Paper';
 import Popper from '@mui/material/Popper';
@@ -22,12 +17,12 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Transitions from 'components/@extended/Transitions';
 import MainCard from 'components/MainCard';
 
-// assets
 import BellOutlined from '@ant-design/icons/BellOutlined';
 import CheckCircleOutlined from '@ant-design/icons/CheckCircleOutlined';
-import GiftOutlined from '@ant-design/icons/GiftOutlined';
-import MessageOutlined from '@ant-design/icons/MessageOutlined';
-import SettingOutlined from '@ant-design/icons/SettingOutlined';
+
+// mock 데이터
+import notificationMock from 'mock/notificationMock.json';
+import NotificationListItem from './NotificationListItem';
 
 // sx styles
 const avatarSX = {
@@ -42,7 +37,6 @@ const actionSX = {
   top: 'auto',
   right: 'auto',
   alignSelf: 'flex-start',
-
   transform: 'none',
 };
 
@@ -117,7 +111,7 @@ export default function Notification() {
             >
               <ClickAwayListener onClickAway={handleClose}>
                 <MainCard
-                  title='Notification'
+                  title='알림'
                   elevation={0}
                   border={false}
                   content={false}
@@ -157,15 +151,18 @@ export default function Notification() {
                       },
                     }}
                   >
-                    <ListItemButton selected={read > 0}>
+                    {notificationMock.map((item, idx) => (
+                      <NotificationListItem key={idx} read={read} item={item} />
+                    ))}
+                    {/* <ListItemButton selected={read > 0}>
                       <ListItemAvatar>
                         <Avatar
                           sx={{
-                            color: 'success.main',
-                            bgcolor: 'success.lighter',
+                            color: 'primary.main',
+                            bgcolor: 'primary.lighter',
                           }}
                         >
-                          <GiftOutlined />
+                          <CheckOutlined />
                         </Avatar>
                       </ListItemAvatar>
                       <ListItemText
@@ -186,16 +183,18 @@ export default function Notification() {
                         </Typography>
                       </ListItemSecondaryAction>
                     </ListItemButton>
+
                     <Divider />
+
                     <ListItemButton>
                       <ListItemAvatar>
                         <Avatar
                           sx={{
-                            color: 'primary.main',
-                            bgcolor: 'primary.lighter',
+                            color: 'error.main',
+                            bgcolor: 'error.lighter',
                           }}
                         >
-                          <MessageOutlined />
+                          <CloseOutlined />
                         </Avatar>
                       </ListItemAvatar>
                       <ListItemText
@@ -215,65 +214,9 @@ export default function Notification() {
                         </Typography>
                       </ListItemSecondaryAction>
                     </ListItemButton>
-                    <Divider />
-                    <ListItemButton selected={read > 0}>
-                      <ListItemAvatar>
-                        <Avatar
-                          sx={{ color: 'error.main', bgcolor: 'error.lighter' }}
-                        >
-                          <SettingOutlined />
-                        </Avatar>
-                      </ListItemAvatar>
-                      <ListItemText
-                        primary={
-                          <Typography variant='h6'>
-                            Your Profile is Complete &nbsp;
-                            <Typography component='span' variant='subtitle1'>
-                              60%
-                            </Typography>{' '}
-                          </Typography>
-                        }
-                        secondary='7 hours ago'
-                      />
-                      <ListItemSecondaryAction>
-                        <Typography variant='caption' noWrap>
-                          2:45 PM
-                        </Typography>
-                      </ListItemSecondaryAction>
-                    </ListItemButton>
-                    <Divider />
-                    <ListItemButton>
-                      <ListItemAvatar>
-                        <Avatar
-                          sx={{
-                            color: 'primary.main',
-                            bgcolor: 'primary.lighter',
-                          }}
-                        >
-                          C
-                        </Avatar>
-                      </ListItemAvatar>
-                      <ListItemText
-                        primary={
-                          <Typography variant='h6'>
-                            <Typography component='span' variant='subtitle1'>
-                              Cristina Danny
-                            </Typography>{' '}
-                            invited to join{' '}
-                            <Typography component='span' variant='subtitle1'>
-                              Meeting.
-                            </Typography>
-                          </Typography>
-                        }
-                        secondary='Daily scrum meeting time'
-                      />
-                      <ListItemSecondaryAction>
-                        <Typography variant='caption' noWrap>
-                          9:10 PM
-                        </Typography>
-                      </ListItemSecondaryAction>
-                    </ListItemButton>
-                    <Divider />
+
+                    <Divider /> */}
+
                     <ListItemButton
                       sx={{ textAlign: 'center', py: `${12}px !important` }}
                     >

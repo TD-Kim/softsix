@@ -4,7 +4,7 @@ import router from 'routes';
 import ThemeCustomization from 'themes';
 
 export default function App() {
-  console.log('App');
+  ('App');
   return (
     // <BrowserRouter>
     //   <Routes>
@@ -13,7 +13,7 @@ export default function App() {
     // </BrowserRouter>
     <ThemeCustomization>
       <ScrollTop>
-        <RouterProvider router={router} />
+        <RouterProvider router={router} future={{ v7_startTransition: true }} />
       </ScrollTop>
     </ThemeCustomization>
   );

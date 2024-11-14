@@ -10,8 +10,7 @@ import Palette from './palette';
 import CustomShadows from './shadows';
 import Typography from './typography';
 
-export default function ThemeCustomization({ childen }) {
-  console.log('ThemeCustomization');
+export default function ThemeCustomization({ children }) {
   const theme = Palette('light', 'default');
 
   const themeTypography = Typography(`'Public Sans', sans-serif`);
@@ -50,7 +49,7 @@ export default function ThemeCustomization({ childen }) {
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={themes}>
         <CssBaseline />
-        {childen}
+        {children}
       </ThemeProvider>
     </StyledEngineProvider>
   );

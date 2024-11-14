@@ -13,12 +13,9 @@ import Drawer from './Drawer';
 import Header from './Header';
 
 import { handlerDrawerOpen, useGetMenuMaster } from 'api/menu';
-debugger;
 // ==============================|| MAIN LAYOUT ||============================== //
 
 export default function DashboardLayout() {
-  console.log('DashboardLayout');
-  debugger;
   const { menuMasterLoading } = useGetMenuMaster();
   const downXL = useMediaQuery((theme) => theme.breakpoints.down('xl'));
 

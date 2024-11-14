@@ -7,47 +7,53 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 
 // assets
-import { CommentOutlined, LockOutlined, QuestionCircleOutlined, UserOutlined, UnorderedListOutlined } from '@ant-design/icons';
+import {
+  LockOutlined,
+  QuestionCircleOutlined,
+  UserOutlined,
+} from '@ant-design/icons';
 
 // ==============================|| HEADER PROFILE - SETTING TAB ||============================== //
 
 export default function SettingTab() {
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const handleListItemClick = (event, index) => {
+  const [selectedIndex, setSelectedIndex] = useState(null);
+  const handleListItemClick = (e, index) => {
     setSelectedIndex(index);
   };
 
   return (
-    <List component="nav" sx={{ p: 0, '& .MuiListItemIcon-root': { minWidth: 32 } }}>
-      <ListItemButton selected={selectedIndex === 0} onClick={(event) => handleListItemClick(event, 0)}>
+    <List
+      component='nav'
+      sx={{ p: 0, '& .MuiListItemIcon-root': { minWidth: 32 } }}
+    >
+      <ListItemButton
+        selected={selectedIndex === 0}
+        onClick={(e) => handleListItemClick(e, 0)}
+      >
         <ListItemIcon>
           <QuestionCircleOutlined />
         </ListItemIcon>
-        <ListItemText primary="Support" />
+        <ListItemText primary='고객지원' />
       </ListItemButton>
-      <ListItemButton selected={selectedIndex === 1} onClick={(event) => handleListItemClick(event, 1)}>
+
+      <ListItemButton
+        selected={selectedIndex === 1}
+        onClick={(e) => handleListItemClick(e, 1)}
+      >
         <ListItemIcon>
           <UserOutlined />
         </ListItemIcon>
-        <ListItemText primary="Account Settings" />
+        <ListItemText primary='권한설정' />
       </ListItemButton>
-      <ListItemButton selected={selectedIndex === 2} onClick={(event) => handleListItemClick(event, 2)}>
+
+      <ListItemButton
+        selected={selectedIndex === 2}
+        onClick={(e) => handleListItemClick(e, 2)}
+      >
         <ListItemIcon>
           <LockOutlined />
         </ListItemIcon>
-        <ListItemText primary="Privacy Center" />
-      </ListItemButton>
-      <ListItemButton selected={selectedIndex === 3} onClick={(event) => handleListItemClick(event, 3)}>
-        <ListItemIcon>
-          <CommentOutlined />
-        </ListItemIcon>
-        <ListItemText primary="Feedback" />
-      </ListItemButton>
-      <ListItemButton selected={selectedIndex === 4} onClick={(event) => handleListItemClick(event, 4)}>
-        <ListItemIcon>
-          <UnorderedListOutlined />
-        </ListItemIcon>
-        <ListItemText primary="History" />
+        <ListItemText primary='인증센터' />
       </ListItemButton>
     </List>
   );

@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { useRef, useState } from 'react';
 
-// material-ui
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import CardContent from '@mui/material/CardContent';
@@ -23,7 +22,6 @@ import MainCard from 'components/MainCard';
 import ProfileTab from './ProfileTab';
 import SettingTab from './SettingTab';
 
-// assets
 import LogoutOutlined from '@ant-design/icons/LogoutOutlined';
 import SettingOutlined from '@ant-design/icons/SettingOutlined';
 import UserOutlined from '@ant-design/icons/UserOutlined';
@@ -201,7 +199,7 @@ export default function Profile() {
                             style={{ marginBottom: 0, marginRight: '10px' }}
                           />
                         }
-                        label='Profile'
+                        label='프로필'
                         {...a11yProps(0)}
                       />
                       <Tab
@@ -217,7 +215,7 @@ export default function Profile() {
                             style={{ marginBottom: 0, marginRight: '10px' }}
                           />
                         }
-                        label='Setting'
+                        label='설정'
                         {...a11yProps(1)}
                       />
                     </Tabs>

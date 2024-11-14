@@ -15,7 +15,6 @@ const SamplePage = Loadable(
   lazy(() => import('pages/extra-pages/sample-page'))
 );
 
-console.log('MainRoutes');
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {

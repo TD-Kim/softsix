@@ -11,6 +11,7 @@ npm install swr
 npm install react-device-detect
 npm install react-apexcharts apexcharts
 npm install formik yup
+npm install date-fns
 
 # 프로젝트 실행
 
