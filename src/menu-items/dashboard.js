@@ -3,25 +3,25 @@ import { DashboardOutlined } from '@ant-design/icons';
 
 // icons
 const icons = {
-  DashboardOutlined
+  DashboardOutlined,
 };
 
 // ==============================|| MENU ITEMS - DASHBOARD ||============================== //
 
 const dashboard = {
   id: 'group-dashboard',
-  title: 'Navigation',
+  title: '대메뉴1',
   type: 'group',
   children: [
     {
       id: 'dashboard',
-      title: 'Dashboard',
+      title: '대시보드',
       type: 'item',
-      url: '/dashboard/default',
+      url: '/',
       icon: icons.DashboardOutlined,
-      breadcrumbs: false
-    }
-  ]
+      breadcrumbs: false,
+    },
+  ],
 };
 
 export default dashboard;

@@ -4,33 +4,33 @@ import { ChromeOutlined, QuestionOutlined } from '@ant-design/icons';
 // icons
 const icons = {
   ChromeOutlined,
-  QuestionOutlined
+  QuestionOutlined,
 };
 
 // ==============================|| MENU ITEMS - SAMPLE PAGE & DOCUMENTATION ||============================== //
 
 const support = {
   id: 'support',
-  title: 'Support',
+  title: '대메뉴4',
   type: 'group',
   children: [
     {
       id: 'sample-page',
-      title: 'Sample Page',
+      title: '중메뉴 4-1',
       type: 'item',
       url: '/sample-page',
-      icon: icons.ChromeOutlined
+      icon: icons.ChromeOutlined,
     },
     {
       id: 'documentation',
-      title: 'Documentation',
+      title: '중메뉴 4-2',
       type: 'item',
-      url: 'https://codedthemes.gitbook.io/mantis/',
+      url: '/undefined4-2',
       icon: icons.QuestionOutlined,
       external: true,
-      target: true
-    }
-  ]
+      target: true,
+    },
+  ],
 };
 
 export default support;

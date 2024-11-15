@@ -102,7 +102,7 @@ export default function Profile() {
         >
           <Avatar alt='profile user' src={avatar1} size='sm' />
           <Typography variant='subtitle1' sx={{ textTransform: 'capitalize' }}>
-            John Doe
+            admin
           </Typography>
         </Stack>
       </ButtonBase>
@@ -159,7 +159,8 @@ export default function Profile() {
                             sx={{ width: 32, height: 32 }}
                           />
                           <Stack>
-                            <Typography variant='h6'>John Doe</Typography>
+                            {/* 프로필 팝업 */}
+                            <Typography variant='h6'>Admin</Typography>{' '}
                             <Typography variant='body2' color='text.secondary'>
                               UI/UX Designer
                             </Typography>

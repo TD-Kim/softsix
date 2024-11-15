@@ -4,33 +4,33 @@ import { LoginOutlined, ProfileOutlined } from '@ant-design/icons';
 // icons
 const icons = {
   LoginOutlined,
-  ProfileOutlined
+  ProfileOutlined,
 };
 
 // ==============================|| MENU ITEMS - EXTRA PAGES ||============================== //
 
 const pages = {
   id: 'authentication',
-  title: 'Authentication',
+  title: '인증/보안',
   type: 'group',
   children: [
     {
       id: 'login1',
-      title: 'Login',
+      title: '로그인',
       type: 'item',
       url: '/login',
       icon: icons.LoginOutlined,
-      target: true
+      target: true,
     },
     {
       id: 'register1',
-      title: 'Register',
+      title: '등록',
       type: 'item',
       url: '/register',
       icon: icons.ProfileOutlined,
-      target: true
-    }
-  ]
+      target: true,
+    },
+  ],
 };
 
 export default pages;

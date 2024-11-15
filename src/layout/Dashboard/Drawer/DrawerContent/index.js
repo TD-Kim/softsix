@@ -1,5 +1,4 @@
 import SimpleBar from 'components/third-party/SimpleBar';
-import NavCard from './NavCard';
 import Navigation from './Navigation';
 
 // ==============================|| DRAWER CONTENT ||============================== //
@@ -13,7 +12,6 @@ export default function DrawerContent() {
         }}
       >
         <Navigation />
-        <NavCard />
       </SimpleBar>
     </>
   );
