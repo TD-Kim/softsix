@@ -1,35 +1,41 @@
 // assets
-import { ChromeOutlined, QuestionOutlined } from '@ant-design/icons';
+import {
+  ChromeOutlined,
+  QuestionOutlined,
+  SnippetsOutlined,
+} from '@ant-design/icons';
 
 // icons
 const icons = {
   ChromeOutlined,
   QuestionOutlined,
+  SnippetsOutlined,
 };
 
 // ==============================|| MENU ITEMS - SAMPLE PAGE & DOCUMENTATION ||============================== //
 
 const support = {
   id: 'support',
-  title: '대메뉴4',
+  title: '관리자',
   type: 'group',
   children: [
     {
-      id: 'sample-page',
-      title: '중메뉴 4-1',
+      id: 'memberManagement',
+      title: '회원관리',
       type: 'item',
-      url: '/sample-page',
-      icon: icons.ChromeOutlined,
+      // url: '/sample-page',
+      url: '/memberManagement',
+      icon: SnippetsOutlined,
     },
-    {
-      id: 'documentation',
-      title: '중메뉴 4-2',
-      type: 'item',
-      url: '/undefined4-2',
-      icon: icons.QuestionOutlined,
-      external: true,
-      target: true,
-    },
+    // {
+    //   id: 'documentation',
+    //   title: '중메뉴 4-2',
+    //   type: 'item',
+    //   url: '/undefined4-2',
+    //   icon: icons.QuestionOutlined,
+    //   external: true,
+    //   target: true,
+    // },
   ],
 };
 

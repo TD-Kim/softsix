@@ -51,10 +51,10 @@ export default function ComponentColor() {
   return (
     <ComponentSkeleton>
       <Grid container spacing={3}>
-        <Grid item xs={12} sm={6} md={4}>
-          <MainCard title='Primary Color'>
+        <Grid item xs={12} sm={12} md={12}>
+          <MainCard title='그늘막 정보 입력'>
             <Stack>
-              <ColorBox
+              {/* <ColorBox
                 bgcolor='primary.lighter'
                 data={{ label: 'Blue-1', color: '#e6f7ff' }}
                 title='primary.lighter'
@@ -108,11 +108,11 @@ export default function ComponentColor() {
                 bgcolor='primary.900'
                 data={{ label: 'Blue-10', color: '#002766' }}
                 title='primary.900'
-              />
+              /> */}
             </Stack>
           </MainCard>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        {/* <Grid item xs={12} sm={6} md={4}>
           <MainCard title='Secondary Color'>
             <Stack>
               <ColorBox
@@ -297,7 +297,7 @@ export default function ComponentColor() {
               />
             </Stack>
           </MainCard>
-        </Grid>
+        </Grid> */}
       </Grid>
     </ComponentSkeleton>
   );

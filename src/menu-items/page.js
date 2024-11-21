@@ -11,24 +11,24 @@ const icons = {
 
 const pages = {
   id: 'authentication',
-  title: '인증/보안',
+  title: '게시판',
   type: 'group',
   children: [
+    // {
+    //   id: 'login1',
+    //   title: '로그인',
+    //   type: 'item',
+    //   url: '/login',
+    //   icon: icons.LoginOutlined,
+    //   target: true,
+    // },
     {
-      id: 'login1',
-      title: '로그인',
+      id: 'notice',
+      title: '공지사항',
       type: 'item',
-      url: '/login',
-      icon: icons.LoginOutlined,
-      target: true,
-    },
-    {
-      id: 'register1',
-      title: '등록',
-      type: 'item',
-      url: '/register',
+      url: '/notice',
       icon: icons.ProfileOutlined,
-      target: true,
+      // target: true,
     },
   ],
 };

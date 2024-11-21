@@ -41,7 +41,7 @@ function NotificationListItem({ read, item }) {
           sx={{ mr: 2 }}
           primary={
             <Typography variant='h6' component='span'>
-              {item.canopyNo} {item.message}
+              {item.sunShadeNo} {item.message}
             </Typography>
           }
           secondary={timeAgo(item.executionTime)}

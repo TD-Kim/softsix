@@ -21,35 +21,35 @@ const MainRoutes = {
   path: '/',
   element: <Dashboard />,
   children: [
+    // {
+    //   path: '/',
+    //   element: <DashboardDefault />,
+    // },
     {
-      path: '/',
-      element: <DashboardDefault />,
+      path: 'dashboard',
+      children: [
+        {
+          path: 'default',
+          element: <DashboardDefault />,
+        },
+      ],
     },
-    //   {
-    //     path: 'color',
-    //     element: <Color />,
-    //   },
-    //   {
-    //     path: 'dashboard',
-    //     children: [
-    //       {
-    //         path: 'default',
-    //         element: <DashboardDefault />,
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     path: 'sample-page',
-    //     element: <SamplePage />,
-    //   },
-    //   {
-    //     path: 'shadow',
-    //     element: <Shadow />,
-    //   },
-    //   {
-    //     path: 'typography',
-    //     element: <Typography />,
-    //   },
+    {
+      path: 'equipmentRegister',
+      element: <Color />,
+    },
+    {
+      path: 'memberManagement',
+      element: <SamplePage />,
+    },
+    {
+      path: 'equipmentStatus',
+      element: <Shadow />,
+    },
+    {
+      path: 'notice',
+      element: <Typography />,
+    },
   ],
 };
 

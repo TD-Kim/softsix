@@ -10,6 +10,7 @@ import Typography from '@mui/material/Typography';
 import MainCard from 'components/MainCard';
 
 export default function Breadcrumbs({ navigation, title, ...others }) {
+  console.log(navigation, title);
   const location = useLocation();
   const [main, setMain] = useState();
   const [item, setItem] = useState();

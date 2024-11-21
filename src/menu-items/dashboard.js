@@ -10,14 +10,14 @@ const icons = {
 
 const dashboard = {
   id: 'group-dashboard',
-  title: '대메뉴1',
+  title: '홈',
   type: 'group',
   children: [
     {
       id: 'dashboard',
       title: '대시보드',
       type: 'item',
-      url: '/',
+      url: '/dashboard/default',
       icon: icons.DashboardOutlined,
       breadcrumbs: false,
     },
