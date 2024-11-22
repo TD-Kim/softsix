@@ -13,6 +13,7 @@ npm install react-apexcharts apexcharts
 npm install formik yup
 npm install date-fns
 npm install sass
+npm i @mui/x-data-grid
 
 # 프로젝트 실행
 
